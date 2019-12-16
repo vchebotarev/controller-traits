@@ -15,6 +15,7 @@ trait ControllerTraitRouter
     protected $router;
 
     /**
+     * @internal
      * @required
      */
     public function setRouter(RouterInterface $router): void

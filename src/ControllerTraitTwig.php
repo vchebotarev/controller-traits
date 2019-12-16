@@ -16,6 +16,7 @@ trait ControllerTraitTwig
 
     /**
      * @required
+     * @internal
      */
     public function setTwig(Environment $twig): void
     {

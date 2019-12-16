@@ -17,6 +17,7 @@ trait ControllerTraitForm
     private $formFactory;
 
     /**
+     * @internal
      * @required
      */
     public function setFormFactory(FormFactoryInterface $formFactory) : void

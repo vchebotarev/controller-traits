@@ -20,6 +20,7 @@ trait ControllerTraitSecurity
     protected $authorizationChecker;
 
     /**
+     * @internal
      * @required
      */
     public function setTokenStorage(TokenStorageInterface $tokenStorage) : void
@@ -28,6 +29,7 @@ trait ControllerTraitSecurity
     }
 
     /**
+     * @internal
      * @required
      */
     public function setAuthorizationChecker(AuthorizationCheckerInterface $authorizationChecker) : void
