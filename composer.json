@@ -22,13 +22,15 @@
     },
     "require": {
         "php": "^7.1.3",
-        "symfony/security": "^3.4 || ^4.4 || ^5.0",
-        "symfony/validator": "^3.4 || ^4.4 || ^5.0",
-        "symfony/http-foundation": "^3.4 || ^4.4 || ^5.0",
-        "symfony/twig-bundle": "^3.4 || ^4.4 || ^5.0",
-        "symfony/routing": " ^3.4 || ^4.4 || ^5.0",
-        "symfony/form": "^3.4 || ^4.4 || ^5.0",
-        "symfony/serializer": "^3.4 || ^4.4 || ^5.0",
-        "jms/serializer": "^3.4"
+        "symfony/framework-bundle": "^3.4 || ^4.4 || ^5.0"
+    },
+    "suggest": {
+        "jms/serializer-bundle": "For using ControllerTraitSerializerJms",
+        "symfony/form": "For using ControllerTraitForm",
+        "symfony/routing": "For using ControllerTraitRouter",
+        "symfony/security-bundle": "For using ControllerTraitSecurity",
+        "symfony/serializer": "For using ControllerTraitSerializer",
+        "symfony/twig-bundle": "For using ControllerTraitTwig",
+        "symfony/validator": "For using ControllerTraitValidator"
     }
 }
