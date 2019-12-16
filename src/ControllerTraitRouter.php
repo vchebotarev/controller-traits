@@ -12,19 +12,19 @@ trait ControllerTraitRouter
     /**
      * @var RouterInterface
      */
-    protected $router;
+    private $traitRouter;
 
     /**
      * @internal
      * @required
      */
-    public function setRouter(RouterInterface $router): void
+    public function setTraitRouter(RouterInterface $routerForTrait): void
     {
-        $this->router = $router;
+        $this->traitRouter = $routerForTrait;
     }
 
     protected function generateUrl(string $route, array $parameters = [], int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
-        return $this->router->generate($route, $parameters, $referenceType);
+        return $this->traitRouter->generate($route, $parameters, $referenceType);
     }
 }

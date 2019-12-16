@@ -12,39 +12,33 @@ trait ControllerTraitSecurity
     /**
      * @var TokenStorageInterface
      */
-    protected $tokenStorage;
+    private $traitTokenStorage;
 
     /**
      * @var AuthorizationCheckerInterface
      */
-    protected $authorizationChecker;
+    private $traitAuthorizationChecker;
 
     /**
      * @internal
      * @required
      */
-    public function setTokenStorage(TokenStorageInterface $tokenStorage) : void
-    {
-        $this->tokenStorage = $tokenStorage;
-    }
-
-    /**
-     * @internal
-     * @required
-     */
-    public function setAuthorizationChecker(AuthorizationCheckerInterface $authorizationChecker) : void
-    {
-        $this->authorizationChecker = $authorizationChecker;
+    public function setTraitSecurityDependencies(
+        TokenStorageInterface $tokenStorage,
+        AuthorizationCheckerInterface $authorizationChecker
+    ): void {
+        $this->traitTokenStorage = $tokenStorage;
+        $this->traitAuthorizationChecker = $authorizationChecker;
     }
 
     protected function isGranted($attributes, $subject = null): bool
     {
-        return $this->authorizationChecker->isGranted($attributes, $subject);
+        return $this->traitAuthorizationChecker->isGranted($attributes, $subject);
     }
 
     protected function getUser()
     {
-        if (null === $token = $this->tokenStorage->getToken()) {
+        if (null === $token = $this->traitTokenStorage->getToken()) {
             return null;
         }
         if (!\is_object($user = $token->getUser())) {

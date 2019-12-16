@@ -14,24 +14,24 @@ trait ControllerTraitForm
     /**
      * @var FormFactoryInterface
      */
-    private $formFactory;
+    private $traitFormFactory;
 
     /**
      * @internal
      * @required
      */
-    public function setFormFactory(FormFactoryInterface $formFactory) : void
+    public function setTraitFormFactory(FormFactoryInterface $traitFormFactory) : void
     {
-        $this->formFactory = $formFactory;
+        $this->traitFormFactory = $traitFormFactory;
     }
 
-    protected function createForm(string $type, $data = null, array $options = array()): FormInterface
+    protected function createForm(string $type, $data = null, array $options = []): FormInterface
     {
-        return $this->formFactory->create($type, $data, $options);
+        return $this->traitFormFactory->create($type, $data, $options);
     }
 
-    protected function createFormBuilder($data = null, array $options = array()): FormBuilderInterface
+    protected function createFormBuilder($data = null, array $options = []): FormBuilderInterface
     {
-        return $this->formFactory->createBuilder(FormType::class, $data, $options);
+        return $this->traitFormFactory->createBuilder(FormType::class, $data, $options);
     }
 }

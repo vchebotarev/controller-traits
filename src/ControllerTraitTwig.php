@@ -12,20 +12,20 @@ trait ControllerTraitTwig
     /**
      * @var Environment
      */
-    protected $twig;
+    private $traitTwig;
 
     /**
      * @required
      * @internal
      */
-    public function setTwig(Environment $twig): void
+    public function setTraitTwig(Environment $twigForTrait): void
     {
-        $this->twig = $twig;
+        $this->traitTwig = $twigForTrait;
     }
 
     protected function render(string $view, array $parameters = [], Response $response = null): Response
     {
-        $content = $this->twig->render($view, $parameters);
+        $content = $this->traitTwig->render($view, $parameters);
         if (null === $response) {
             $response = new Response();
         }
