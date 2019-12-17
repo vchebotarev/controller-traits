@@ -25,6 +25,8 @@
         "symfony/framework-bundle": "^3.4 || ^4.4 || ^5.0"
     },
     "suggest": {
+        "doctrine/doctrine-bundle": "For using ControllerTraitDoctrine",
+        "doctrine/orm": "For using ControllerTraitDoctrine",
         "jms/serializer-bundle": "For using ControllerTraitSerializerJms",
         "symfony/form": "For using ControllerTraitForm",
         "symfony/routing": "For using ControllerTraitRouter",
