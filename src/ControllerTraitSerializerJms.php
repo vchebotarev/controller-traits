@@ -16,7 +16,8 @@ trait ControllerTraitSerializerJms
     private $traitSerializerJms;
 
     /**
-     * @param SerializerInterface $traitSerializerJms
+     * @required
+     * @internal
      */
     public function setTraitSerializerJms(SerializerInterface $traitSerializerJms) : void
     {
