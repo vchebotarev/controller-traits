@@ -1,7 +1,7 @@
 {
     "name": "chebur/controller-traits",
     "type": "library",
-    "description": "Some symfony controller constraints",
+    "description": "Some symfony controller traits",
     "keywords": [
         "symfony",
         "controller"
