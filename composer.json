@@ -25,14 +25,14 @@
         "symfony/framework-bundle": "^3.4 || ^4.4 || ^5.0"
     },
     "suggest": {
-        "doctrine/doctrine-bundle": "For using ControllerTraitDoctrine",
-        "doctrine/orm": "For using ControllerTraitDoctrine",
-        "jms/serializer-bundle": "For using ControllerTraitSerializerJms",
-        "symfony/form": "For using ControllerTraitForm",
-        "symfony/routing": "For using ControllerTraitRouter",
-        "symfony/security-bundle": "For using ControllerTraitSecurity",
-        "symfony/serializer": "For using ControllerTraitSerializer",
-        "symfony/twig-bundle": "For using ControllerTraitTwig",
-        "symfony/validator": "For using ControllerTraitValidator"
+        "doctrine/doctrine-bundle": "For using Doctrine trait",
+        "doctrine/orm": "For using Doctrine trait",
+        "jms/serializer-bundle": "For using SerializerJms trait",
+        "symfony/form": "For using Form trait",
+        "symfony/routing": "For using Router trait",
+        "symfony/security-bundle": "For using Security trait",
+        "symfony/serializer": "For using Serializer trait",
+        "symfony/twig-bundle": "For using Twig trait",
+        "symfony/validator": "For using Validator trait"
     }
 }
